@@ -11,7 +11,7 @@ import SwiftUI
 struct FreeToGameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
