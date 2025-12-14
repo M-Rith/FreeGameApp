@@ -25,7 +25,10 @@ struct DiscoverView : View {
                     }
                     else {
                         List(vm.games) { game in
-                            Text(game.title)
+                            GameCardView(game: game)
+                        }.listStyle(.plain)
+                        .refreshable {
+                            await vm.load()
                         }
                         
                     }
