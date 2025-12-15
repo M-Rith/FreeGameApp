@@ -15,6 +15,6 @@ struct GameCardView: View {
         VStack {
             Text(game.title)
             Text(game.short_description)
-        }
+        }.padding(.top, 20)
     }
 }

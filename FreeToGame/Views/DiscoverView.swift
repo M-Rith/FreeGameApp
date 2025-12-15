@@ -24,6 +24,7 @@ struct DiscoverView : View {
                         }
                     }
                     else {
+                      
                         List(vm.games) { game in
                             GameCardView(game: game)
                         }.listStyle(.plain)
@@ -35,8 +36,9 @@ struct DiscoverView : View {
                 }.task {
                     if vm.games.isEmpty { await vm.load() }
                 }
+            
                 .navigationTitle("GamerPower")
-                .navigationBarTitleDisplayMode(.inline)
+                
         }
         
     }
